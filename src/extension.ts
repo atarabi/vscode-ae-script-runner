@@ -55,7 +55,8 @@ export function activate(context: vscode.ExtensionContext) {
             const document = editor.document;
             const fileName = document.fileName;
             if (fs.existsSync(fileName)) {
-                child_process.execFile(aePath, ['-r', fileName], () => { });
+                aePath = aePath.indexOf(' ') === -1 ? aePath : `"${aePath}"`;
+                child_process.exec(`${aePath} -r ${fileName}`, () => {});
             } else {
                 throw 'Please save the file.';
             }

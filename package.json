@@ -2,7 +2,7 @@
     "name": "ae-script-runner",
     "displayName": "AE Script Runner",
     "description": "Run Adobe After Effects Script",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "atarabi",
     "repository": {
         "type": "git",
